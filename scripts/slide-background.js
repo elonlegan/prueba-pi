@@ -1,5 +1,5 @@
 const slide = document.querySelector('.slides');
-var speed = 1000;
+var speed = 100000000;
 var slidePosition = 1;
 let slides = document.querySelectorAll('.slide');
 const slideWidth = slides[0].clientWidth;
