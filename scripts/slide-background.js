@@ -8,14 +8,15 @@ let counter = 0;
 console.log(slideWidth);
 
 function slideBackground() {
-	slide.style.transform = `translateX(${-slidePosition}px)`;
 	if (slidePosition % slideWidth === 0) {
 		console.log(counter);
 		slides = document.querySelectorAll('.slide');
 		var newSlide = slides[counter].cloneNode(true);
+		slides[0].remove();
 		slide.appendChild(newSlide);
-		counter++;
+		slidePosition = slidePosition - slideWidth;
 	}
+	slide.style.transform = `translateX(${-slidePosition}px)`;
 	slidePosition++;
 }
 
