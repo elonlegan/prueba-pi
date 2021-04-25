@@ -5,11 +5,8 @@ let slides = document.querySelectorAll('.slide');
 const slideWidth = slides[0].clientWidth;
 let counter = 0;
 
-console.log(slideWidth);
-
 function slideBackground() {
 	if (slidePosition % slideWidth === 0) {
-		console.log(counter);
 		slides = document.querySelectorAll('.slide');
 		var newSlide = slides[counter].cloneNode(true);
 		slides[0].remove();
